@@ -1,0 +1,344 @@
+/* reset some basic elements for better consistency */
+html {
+    background-color: #1d1d1d;
+    color: white;
+    overflow-x: hidden;
+    padding: 20px;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ul {
+    
+    padding: 0;
+    list-style: none;
+}
+
+@font-face {
+    font-family: 'Consolas';
+    src: url('fonts/Consolas.ttf') format('ttf'),
+}
+
+body {
+    font-family: 'Consolas', Arial, sans-serif;
+}
+
+
+/* navbar */
+.inline-block {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.navigation {
+    background-color: #1d1d1d;
+    padding: 5px 0;
+}
+
+.logo {
+    width: 23%;
+    padding: 1%;
+    text-align: center;
+}
+
+nav {
+    width: 73%;
+    padding-top: 30px;
+    margin-top: -120px;
+    margin-left: 70%;
+    
+}
+
+nav ul {
+    width: 50%;
+}
+
+nav  ul li{
+    padding: 10px;;
+}
+
+/* hero image */
+
+.content {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.heroImg button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #f499c0;
+    color: #000000;
+    cursor: pointer;
+    margin: 20px 0;
+    border-radius: 2%;
+}
+
+/* footer */
+footer {
+    background-color: #1d1d1d;
+    padding: 20px 0;
+    text-align: center;
+    margin: 50px 0;
+}
+
+footer ul {
+    display: inline-block;
+    padding: 0;
+    vertical-align: top;
+}
+
+footer ul li {
+    display: inline-block;
+    padding: 0 15px;
+    color: #fff;
+}
+
+/* challenge 18 css starts here*/
+
+.mySkills, .myWork {
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.mySkills h1, .myWork h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* flexbox styles for skills section */
+.flexContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flexContainer > div {
+    width: 30%;
+    text-align: center;
+}
+
+.flexContainer img {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+/* grid styles for work section */
+.workGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    justify-items: center;
+}
+
+.workGrid > div {
+    text-align: center;
+}
+
+.workGrid img {
+    max-width: 100%;
+}
+
+.myWork h3 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* mobile media query */
+@media (max-width: 600px) {
+    .flexContainer {
+        flex-direction: column;
+    }
+
+    .flexContainer > div {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .workGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .workGrid > div {
+        margin-bottom: 20px;
+    }
+}
+
+/* my own styling preferences :) */
+
+.mySkills {
+    margin: 20px;
+}
+
+button {
+    cursor: pointer;
+    margin: 10px;
+    background-color: #f499c0;
+    color: #000000;
+    margin: 20px 0;
+    border-radius: 2%;
+    border: none;
+    padding: 10px 20px;
+}
+
+button:hover {
+    background-color: #ffbdda;
+    color: #000000;
+}
+
+.myLogo{
+    width: 100%;
+}
+
+.myPhoto{
+    width: 30%;
+    border-radius: 50%;
+    margin: 20px;
+}
+
+.project1{
+    width: 80%;
+}
+
+.project2{
+    width: 80%;
+}
+
+.project3{
+    width: 80%;
+}
+
+.skill1 {
+    transition: transform 0.5s ease;  
+}
+
+.skill2 {
+    transition: transform 0.5s ease; 
+}
+
+.skill3 {
+    transition: transform 0.5s ease; 
+}
+
+.skill1:hover{
+    transform: scale(1.5);
+    cursor: pointer;
+    padding:20px;
+}
+
+.skill2:hover{
+    transform: scale(1.5);
+    cursor: pointer;
+    padding:20px;
+}
+
+.skill3:hover{
+    transform: scale(1.5);
+    cursor: pointer;
+    padding:20px;
+}
+
+li{
+    cursor: pointer;
+    color: rgb(208, 255, 170);
+    text-decoration: underline;
+}
+
+li:hover{
+    color: rgb(245, 255, 237);
+}
+
+h1{
+    text-decoration: underline;
+    color: #cc87d5;
+    margin-top: 50px;
+}
+
+h3{
+    color: #f499c0;
+    cursor: pointer;
+}
+
+h3:hover{
+    color: #ffbdda;
+}
+
+h4{
+    color: #f499c0;
+    margin: 10px;
+}
+
+.typing-text::after {
+    content: '';
+    display: inline-block;
+    width: 0.3ch;
+    height: 1em;
+    background-color: rgb(255, 255, 255);
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    from, to {
+        background-color: transparent;
+    }
+    50% {
+        background-color: rgb(255, 255, 255);
+    }
+}
+
+.contact{
+    color: #cc87d5;
+    font-size: 24px;
+    margin: 30px;
+    text-decoration: underline;
+}
+
+.contactInfo{
+    color: #ffffff;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.license{
+    color: #ffffff;
+    font-size: 14px;
+    margin-top: 100px;
+}
+
+.inline-block{
+    color: rgb(208, 255, 170);
+}
+
+/* Challenge 19 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: #1d1d1d;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    color: white;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
