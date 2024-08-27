@@ -30,7 +30,9 @@
             <div class="content">
                 <img src="css/images/myphoto.jpg" class="myPhoto" alt="My Photo">
                 <p class="typing-text"> I was raised in Romania and moved to the United States as an international student in 2019 in order to pursue my dream of becoming an artist in the technology field, as these two worlds collide for me.I am currently a graduate student at SCI-Arc, pursuing a Master of Architecture degree.I previously earned a B.A. in Art and Art History and a minor in Media Arts and Culture at Occidental College, as well as a degree from the University of California Berkeley Extension in Coding. I am also actively working towards a degree from Columbia University in UI/UX.I am extremely passionate about architecture as a way of thinking, technology and science, coding and design, as well as any problem mathematics can solve.You’ll often find me up at 4am working on challenging coding tasks as I get very driven by my passion… (or just playing Minesweeper and Sudoku).I am looking forward to advancing my career in these fields and exploring the various sides of them, as well as opportunities to grow and learn. </p>
+            <a href="https://drive.google.com/file/d/1KKg2dYXk_mDx2m3lvWGOp0Hg4Fa9kSN3/view">
                 <button> Download Resume </button>
+            </a>
             </div>
         </section>
 
@@ -106,7 +108,26 @@
     <footer>
         <h1 class = "contact">contact</h1>
         <p class = "contactInfo">cristinanevelits@yahoo.com -- instagram: @crisnevelits -- +1 (213) 374 5567</p>
-        <button>Send Email</button>
+
+        <div id="emailModal" class="modal">
+            <div class="modal-content">
+                
+                <button> Send an Email </button>
+
+                <form id="emailForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+
         <div>
         <ul class="footerNav">
             <li class="inline-block"> about </li>
