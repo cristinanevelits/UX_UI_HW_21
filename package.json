@@ -1,9 +1,0 @@
-{
-  "name": "nevelitsportfolio",
-  "scripts": {
-    "start": "node index.js"
-  },
-  "dependencies": {
-    "express": "^4.19.2"
-  }
-}
