@@ -20,42 +20,38 @@ $(document).ready(function() {
     });
 });
 
-// create email form
 
-// Get modal element
-const modal = document.getElementById("emailModal");
-// Get button that opens the modal
-const btn = document.getElementById("sendEmailBtn");
-// Get the <span> element that closes the modal
-const span = document.getElementsByClassName("close")[0];
-// Get the form element
-const form = document.getElementById("emailForm");
+// email form
 
-// When the user clicks the button, open the modal 
-btn.onclick = function () {
-    modal.style.display = "block";
-}
+document.addEventListener("DOMContentLoaded", function () {
+    const emailButton = document.getElementById("emailButton");
+    const emailModal = document.getElementById("emailModal");
+    const emailForm = document.getElementById("emailForm");
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function () {
-    modal.style.display = "none";
-}
+    // show the modal when the button is clicked
+    emailButton.addEventListener("click", function () {
+        emailModal.style.display = "block";
+    });
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-    if (event.target === modal) {
-        modal.style.display = "none";
-    }
-}
+    // hide the modal when clicking outside 
+    window.addEventListener("click", function (event) {
+        if (event.target === emailModal) {
+            emailModal.style.display = "none";
+        }
+    });
 
-// Handle form submission
-form.onsubmit = function (event) {
-    event.preventDefault(); // Prevent page refresh
+    // form submission
+    emailForm.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent the default form submission (which refreshes the page)
 
-    // Here you can handle the email sending logic
-    // For now, we'll just display a message
-    alert("Email sent!");
+        // email sending logic 
+        alert("Email sent successfully!");
 
-    // Close the modal after submission
-    modal.style.display = "none";
-}
+        // hide the modal after sending
+        emailModal.style.display = "none";
+
+        // reset the form fields
+        emailForm.reset();
+    });
+});
+
